@@ -1,0 +1,29 @@
+INCLUDE options/options.makejail
+
+ARG ttyd_tag=13.4
+
+FROM --entrypoint gh+AppJail-makejails/ttyd ttyd:${ttyd_tag}
+
+STOP
+
+STAGE start
+
+ARG command=sh
+
+CMD daemon \
+        -t "Share your terminal over the web" \
+        -p /.pid \
+        -o /.log \
+            ttyd -W ${command}
+
+STAGE custom:ttyd_status
+
+CMD if [ -f "/.pid" ]; then \
+        top -ap `head -1 /.pid`; \
+    fi
+
+STAGE custom:ttyd_log
+
+CMD if [ -f "/.log" ]; then \
+        less -R /.log; \
+    fi
