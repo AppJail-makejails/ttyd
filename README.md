@@ -21,6 +21,9 @@ appjail start ttyd
 ### Arguments (stage: build):
 
 * `ttyd_tag` (default: `13.4`): See [#tags](#tags).
+
+### Arguments (stage: start):
+
 * `ttyd_command` (default: `sh`): Command to execute.
 
 ### Check current status
