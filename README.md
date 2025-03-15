@@ -20,7 +20,7 @@ appjail start ttyd
 
 ### Arguments (stage: build):
 
-* `ttyd_tag` (default: `13.4`): See [#tags](#tags).
+* `ttyd_tag` (default: `13.5`): See [#tags](#tags).
 * `ttyd_ajspec` (default: `gh+AppJail-makejails/ttyd`): Entry point where the `appjail-ajspec(5)` file is located.
 
 ### Arguments (stage: start):
@@ -47,5 +47,5 @@ appjail run -s ttyd_log ttyd
 
 | Tag    | Arch    | Version        | Type   |
 | ------ | ------- | -------------- | ------ |
-| `13.4` | `amd64` | `13.4-RELEASE` | `thin` |
+| `13.5` | `amd64` | `13.5-RELEASE` | `thin` |
 | `14.2` | `amd64` | `14.2-RELEASE` | `thin` |
