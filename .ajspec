@@ -1,16 +1,17 @@
 tags+: 13.5
 13.5.arch: amd64
 13.5.name: "ttyd"
-13.5.timestamp.amd64: 1742146892
-13.5.sum.amd64: 20e45a1a83b72a8fe31460df876817616426a459bc1c2eaf67d7bf0f88d9aa37
-13.5.size.amd64: 31938494
+13.5.timestamp.amd64: 1742273154
+13.5.sum.amd64: baa2fd4ccbae22fc781e84769ec968730898aedb5f5730657a2f2cdd3eeb0177
+13.5.size.amd64: 31938369
 13.5.source.amd64: "http://appjail.hpc.at/ttyd/13.5-amd64-image.appjail"
 13.5.source.amd64+: "https://images.all101bsd.download/ttyd/13.5-amd64-image.appjail"
 tags+: 14.2
 14.2.arch: amd64
 14.2.name: "ttyd"
-14.2.timestamp.amd64: 1742147023
-14.2.sum.amd64: 41c92b7e17b7c1464bd8da14bef49b85fdd7afdc20bc4e8fcb2101246b6cf3d9
-14.2.size.amd64: 31392448
+14.2.timestamp.amd64: 1742273279
+14.2.sum.amd64: 815c502bd89d3250124f1e471fdfb821a0d54530e017688d3cba06960d53546e
+14.2.size.amd64: 31394717
 14.2.source.amd64: "http://appjail.hpc.at/ttyd/14.2-amd64-image.appjail"
 14.2.source.amd64+: "https://images.all101bsd.download/ttyd/14.2-amd64-image.appjail"
+maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
