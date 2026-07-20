@@ -1,30 +1,5 @@
-INCLUDE options/options.makejail
+ARG ttyd_from=ghcr.io/appjail-makejails/ttyd
+ARG ttyd_tag=latest
 
-ARG ttyd_ajspec=gh+AppJail-makejails/ttyd
-ARG ttyd_tag=14.3
-
-FROM --entrypoint "${ttyd_ajspec}" ttyd:${ttyd_tag}
-
-STOP
-
-STAGE start
-
-ARG command=sh
-
-CMD daemon \
-        -t "Share your terminal over the web" \
-        -p /.pid \
-        -o /.log \
-            ttyd -W ${command}
-
-STAGE custom:ttyd_status
-
-CMD if [ -f "/.pid" ]; then \
-        top -ap `head -1 /.pid`; \
-    fi
-
-STAGE custom:ttyd_log
-
-CMD if [ -f "/.log" ]; then \
-        less -R /.log; \
-    fi
+OPTION overwrite=force
+OPTION from=${ttyd_from}:${ttyd_tag}
