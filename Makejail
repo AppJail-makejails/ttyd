@@ -1,5 +1,6 @@
 ARG ttyd_from=ghcr.io/appjail-makejails/ttyd
 ARG ttyd_tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=${ttyd_from}:${ttyd_tag}
