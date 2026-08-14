@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.title="ttyd" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U ttyd; \
+    pkg install ttyd; \
     \
     if [ -z "${NO_PKGCLEAN}" ]; then \
         pkg clean -a; \
